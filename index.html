@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>My weather service</title>
+    <script src="func.js"></script>
+</head>
+<body>
+    <h1>Welcome to My weather service</h1>
+    <p>Please enter a city : </p>
+    <form>
+        <select id="city" name="cities">
+            <option value="merignac">Mérignac</option>
+            <option value="saintgeours">Saint-Geours-de-Maremne</option>
+            <option value="toulouse">Toulouse</option>
+        </select>
+        <button type="button" onclick="getWeather()">Submit</button>
+    </form>
+    <img src="https://openweathermap.org/payload/api/media/file/01d.png" id="icon">
+    <p>Global weather : <span id="weath"></span></p>
+    <p>Current temperature : <span id="temp"></span>°C</p>
+    <p>Minimal temperature : <span id="mintemp"></span>°C</p>
+    <p>Maximal temperature : <span id="maxtemp"></span>°C</p>
+</body>
+</html>
