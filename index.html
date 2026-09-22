@@ -2,22 +2,52 @@
 <head>
     <title>My weather service</title>
     <script src="func.js"></script>
+    <!-- Bootstrap links -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <h1>Welcome to My weather service</h1>
-    <p>Please enter a city : </p>
-    <form>
-        <select id="city" name="cities">
-            <option value="merignac">Mérignac</option>
-            <option value="saintgeours">Saint-Geours-de-Maremne</option>
-            <option value="toulouse">Toulouse</option>
-        </select>
-        <button type="button" onclick="getWeather()">Submit</button>
-    </form>
-    <img src="https://openweathermap.org/payload/api/media/file/01d.png" id="icon">
-    <p>Global weather : <span id="weath"></span></p>
-    <p>Current temperature : <span id="temp"></span>°C</p>
-    <p>Minimal temperature : <span id="mintemp"></span>°C</p>
-    <p>Maximal temperature : <span id="maxtemp"></span>°C</p>
+    <div class="container">
+        <h1 class="h1">Welcome to My weather service</h1>
+        <div class="col-sm-3">
+            <form class="form .col-xs"></form>
+            <div class="form-group">
+                <label>Please select a city : </label>
+                <select id="city" name="cities" class="form-control">
+                    <option value="merignac">Mérignac</option>
+                    <option value="saintgeours">Saint-Geours-de-Maremne</option>
+                    <option value="toulouse">Toulouse</option>
+                </select>
+                <button type="button" onclick="getWeather()" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+        <div class="col-sm-3">
+            <img src="https://openweathermap.org/payload/api/media/file/01d.png" id="icon" class="img-responsive" style="height:50px;clear:both;margin:auto;">
+            <p>
+                <dl class="dl-horizontal">
+                    <dt>Global weather</dt>
+                    <dd><span id="weath"></span></dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Current temperature</dt>
+                    <dd><span id="temp"></span>°C</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Minimal temperature</dt>
+                    <dd><span id="mintemp"></span>°C</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Maximal temperature</dt>
+                    <dd><span id="maxtemp"></span>°C</dd>
+                </dl>
+            </p>
+        </div>
+    </div>
 </body>
 </html>
